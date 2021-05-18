@@ -1,0 +1,1 @@
+pytest -v -s testCases/test_automate_updation.py --browser chrome
