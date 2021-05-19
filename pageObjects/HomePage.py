@@ -1,7 +1,6 @@
 from selenium.webdriver.common.by import By
 
 from pageObjects.BasePage import BasePage
-from pageObjects.SalesModulePage import SalesModulePage
 from utilities import ScreenShot
 
 
@@ -21,10 +20,3 @@ class HomePage(BasePage):
 
     def click_allapps(self):
         self.click(self.ALLAPPS)
-
-    def select_sales(self):
-        self.click(self.SELECT_SALES)
-
-        assert True == self.check_text_presence(self.HEADING, 'Sales')
-        ScreenShot.takeScreenshot(self.driver, 'opened_sales_app')
-        return SalesModulePage(self.driver)
